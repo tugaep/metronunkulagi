@@ -9,6 +9,7 @@ import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { motion, PanInfo, AnimatePresence } from 'framer-motion';
 import { supabase } from '@/lib/supabase';
+import { trackEvent } from '@/lib/analytics';
 
 const SwipeableDigit = ({
     value,
@@ -32,10 +33,12 @@ const SwipeableDigit = ({
             // Swipe Up -> Increment
             const next = current + 1 > max ? 0 : current + 1;
             onChange(next.toString().padStart(2, '0'));
+            trackEvent('time_edit', { type: 'swipe_up', value: next });
         } else if (info.offset.y > threshold) {
             // Swipe Down -> Decrement
             const prev = current - 1 < 0 ? max : current - 1;
             onChange(prev.toString().padStart(2, '0'));
+            trackEvent('time_edit', { type: 'swipe_down', value: prev });
         }
     };
 
@@ -46,7 +49,9 @@ const SwipeableDigit = ({
         // Clamp to max (e.g., 23 or 59)
         if (val > max) val = max;
         if (val < 0) val = 0;
-        onChange(val.toString().padStart(2, '0'));
+        const finalVal = val.toString().padStart(2, '0');
+        onChange(finalVal);
+        trackEvent('time_edit', { type: 'input_blur', value: finalVal });
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -203,17 +208,24 @@ export const InlineSubmitForm = () => {
 
             if (error) {
                 console.error('Supabase error:', error);
-                toast.error('Gönderilemedi, bi sıkıntı var.');
+                toast.error('internet çekmiyo galiba birazdan tekrar dene.');
                 return;
             }
 
         } catch (err) {
             console.error('Failed to save submission:', err);
-            toast.error('Gönderilemedi, bi sıkıntı var.');
+            toast.error('kaydedemedim tekrar dener misin?');
             return;
         }
 
         addConversation(payload);
+
+        trackEvent('form_submit', {
+            line_id: selectedLine.id,
+            station_from: primaryStation.Description,
+            station_to: secondaryStation || '',
+            has_people_desc: !!who.trim()
+        });
 
         toast.success('eyw', {
             description: 'insta @kulakmetrofiri',

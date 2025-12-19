@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Ear, Instagram } from 'lucide-react';
 import { useMetro } from '@/context/MetroContext';
+import { trackEvent } from '@/lib/analytics';
 
 export const Header = () => {
   const { selectedLine, activeColor } = useMetro();
@@ -39,6 +40,7 @@ export const Header = () => {
           href="https://instagram.com/kulakmetrofiri"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent('header_instagram_click')}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 active:scale-95"

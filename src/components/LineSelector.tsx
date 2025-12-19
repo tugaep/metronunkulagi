@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useMetro } from '@/context/MetroContext';
 import { METRO_LINE_COLORS } from '@/types/metro';
 import { cn } from '@/lib/utils';
+import { trackEvent } from '@/lib/analytics';
 
 export const LineSelector = () => {
   const { lines, selectedLine, setSelectedLine, setSelectedStations, setSelectedDirection } = useMetro();
@@ -10,6 +11,11 @@ export const LineSelector = () => {
     setSelectedLine(line);
     setSelectedStations([]);
     setSelectedDirection('');
+
+    trackEvent('line_select', {
+      line_id: line.id,
+      line_name: line.name
+    });
   };
 
   return (

@@ -1,11 +1,14 @@
 import { useRef } from 'react';
 import { useCats } from "@/contexts/CatContext";
+import { trackEvent } from '@/lib/analytics';
 
 export const Footer = () => {
     const { addCat } = useCats();
     const footerRef = useRef<HTMLElement>(null);
 
     const handleSpawnCat = () => {
+        trackEvent('spawn_cat');
+
         if (footerRef.current) {
             const rect = footerRef.current.getBoundingClientRect();
             // Spawn just above the footer, random X within viewport
@@ -25,7 +28,7 @@ export const Footer = () => {
         >
             <div className="space-y-1">
                 <p>no copyright just for fun</p>
-                <p>thanks to <a href="https://instagram.com/overheardbogazici" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">@overheardbogazici</a> for the idea</p>
+                <p>thanks to <a href="https://instagram.com/overheardbogazici" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('footer_credit_click')} className="underline hover:text-foreground transition-colors">@overheardbogazici</a> for the idea</p>
             </div>
 
             <button

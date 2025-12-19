@@ -3,6 +3,7 @@ import { MapPin, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useMetro } from '@/context/MetroContext';
 import { cn } from '@/lib/utils';
 import { Station, METRO_LINE_COLORS } from '@/types/metro';
+import { trackEvent } from '@/lib/analytics';
 
 export const StationSelector = () => {
   const { selectedLine, selectedStations, setSelectedStations, selectedDirection, setSelectedDirection } = useMetro();
@@ -19,6 +20,11 @@ export const StationSelector = () => {
   ];
 
   const handleStationSelect = (station: Station) => {
+    trackEvent('station_select', {
+      station_name: station.Description,
+      line_id: selectedLine.id
+    });
+
     const isSelected = selectedStations.some(s => s.Id === station.Id);
 
     if (isSelected) {
@@ -64,7 +70,12 @@ export const StationSelector = () => {
               return (
                 <motion.button
                   key={dir.id}
-                  onClick={() => setSelectedDirection(dir.label || '')}
+                  onClick={() => {
+                    setSelectedDirection(dir.label || '');
+                    trackEvent('direction_select', {
+                      direction: dir.label || 'unknown'
+                    });
+                  }}
                   className={cn(
                     "flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200",
                     "border-2",
