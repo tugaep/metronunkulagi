@@ -1,0 +1,20 @@
+Line,Route,Color Name,Hex Code
+M1A/B,Yenikapı – Airport / Kirazlı,Red,#EE2229
+M2,Yenikapı – Hacıosman,Green,#059A4D
+M3,Bakırköy – Kayaşehir,Blue,#0CA6DF
+M4,Kadıköy – Sabiha Gökçen,Pink / Magenta,#E81E77
+M5,Üsküdar – Samandıra,Purple,#683166
+M6,Levent – Hisarüstü,Beige,#C9AA79
+M7,Yıldız – Mahmutbey,Salmon,#F490B3
+M8,Bostancı – Parseller,Navy Blue,#487ABF
+M9,Ataköy – Olimpiyat,Yellow,#FCD10D
+M10,Pendik Merkez – Fevzi Çakmak,Bright Green,#4CAA3C
+T1,Kabataş – Bağcılar,Dark Blue,#004B86
+T3,Kadıköy – Moda (Nostalgic),Brown,#99562F
+T4,Topkapı – Mescid-i Selam,Orange,#FF7E42
+T5,Eminönü – Alibeyköy,Lilac,#7B72B2
+F1,Taksim – Kabataş,Greyish Brown,#7A745A
+F3,Vadistanbul – Seyrantepe,Greyish Brown,#7A745A
+F4,Boğaziçi Ü. – Aşiyan,Greyish Brown,#7A745A
+TF1,Maçka – Taşkışla,Dark Green,#007A33
+TF2,Eyüp – Piyer Loti,Dark Green,#007A33
