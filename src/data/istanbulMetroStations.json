@@ -4789,6 +4789,44 @@
                 "Latitude": "41.029000",
                 "Longitude": "28.973000"
             }
+        },
+        {
+            "Id": 309,
+            "Name": "SEYRANTEPE",
+            "LineId": 24,
+            "LineName": "F3",
+            "Description": "Seyrantepe",
+            "Order": 1,
+            "IsActive": true,
+            "FunctionalCode": "F-F03-S-H-I-01",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.100906",
+                "Longitude": "28.997775"
+            }
+        },
+        {
+            "Id": 310,
+            "Name": "VADISTANBUL",
+            "LineId": 24,
+            "LineName": "F3",
+            "Description": "Vadistanbul",
+            "Order": 2,
+            "IsActive": true,
+            "FunctionalCode": "F-F03-S-H-I-02",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.109000",
+                "Longitude": "28.990000"
+            }
         }
     ]
 }
