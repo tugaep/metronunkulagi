@@ -70,6 +70,7 @@ export const METRO_LINE_COLORS: Record<string, string> = {
   'T5': '249 28% 57%',     // Lilac #7B72B2
   // Funiculars
   'F1': '51 16% 41%',      // Greyish Brown #7A745A
+  'F2': '51 16% 41%',      // Greyish Brown #7A745A
   'F3': '51 16% 41%',      // Greyish Brown #7A745A
   'F4': '51 16% 41%',      // Greyish Brown #7A745A
   // Teleferiks (Cable cars)

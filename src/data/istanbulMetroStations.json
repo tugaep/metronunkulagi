@@ -4656,6 +4656,44 @@
                 "Latitude": "41.100906",
                 "Longitude": "28.997775"
             }
+        },
+        {
+            "Id": 302,
+            "Name": "SISHANE",
+            "LineId": 22,
+            "LineName": "F2",
+            "Description": "Şişhane",
+            "Order": 1,
+            "IsActive": true,
+            "FunctionalCode": "F-F02-S-H-I-01",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.028298",
+                "Longitude": "28.97285"
+            }
+        },
+        {
+            "Id": 303,
+            "Name": "KARAKOY",
+            "LineId": 22,
+            "LineName": "F2",
+            "Description": "Karaköy",
+            "Order": 2,
+            "IsActive": true,
+            "FunctionalCode": "F-F02-S-H-I-02",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.022400",
+                "Longitude": "28.976000"
+            }
         }
     ]
 }
