@@ -64,7 +64,7 @@ export const METRO_LINE_COLORS: Record<string, string> = {
   'M12': '280 65% 55%',    // Violet (placeholder)
   // Tram lines
   'T1': '206 100% 26%',    // Dark Blue #004B86
-  'T2': '210 70% 55%',     // Tram Blue (placeholder)
+  'T2': '51 16% 41%',      // Greyish Brown #7A745A
   'T3': '22 53% 39%',      // Brown #99562F
   'T4': '19 100% 63%',     // Orange #FF7E42
   'T5': '249 28% 57%',     // Lilac #7B72B2

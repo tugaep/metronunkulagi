@@ -4694,6 +4694,101 @@
                 "Latitude": "41.022400",
                 "Longitude": "28.976000"
             }
+        },
+        {
+            "Id": 304,
+            "Name": "TAKSIM",
+            "LineId": 23,
+            "LineName": "T2",
+            "Description": "Taksim",
+            "Order": 1,
+            "IsActive": true,
+            "FunctionalCode": "T-T02-S-H-I-01",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.037000",
+                "Longitude": "28.985000"
+            }
+        },
+        {
+            "Id": 305,
+            "Name": "HUSEYIN AGA CAMII",
+            "LineId": 23,
+            "LineName": "T2",
+            "Description": "Hüseyin Ağa Camii",
+            "Order": 2,
+            "IsActive": true,
+            "FunctionalCode": "T-T02-S-H-I-02",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.034500",
+                "Longitude": "28.980000"
+            }
+        },
+        {
+            "Id": 306,
+            "Name": "GALATASARAY LISESI",
+            "LineId": 23,
+            "LineName": "T2",
+            "Description": "Galatasaray Lisesi",
+            "Order": 3,
+            "IsActive": true,
+            "FunctionalCode": "T-T02-S-H-I-03",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.032500",
+                "Longitude": "28.977000"
+            }
+        },
+        {
+            "Id": 307,
+            "Name": "ODAKULE",
+            "LineId": 23,
+            "LineName": "T2",
+            "Description": "Odakule",
+            "Order": 4,
+            "IsActive": true,
+            "FunctionalCode": "T-T02-S-H-I-04",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.030500",
+                "Longitude": "28.975000"
+            }
+        },
+        {
+            "Id": 308,
+            "Name": "TUNEL",
+            "LineId": 23,
+            "LineName": "T2",
+            "Description": "Tünel",
+            "Order": 5,
+            "IsActive": true,
+            "FunctionalCode": "T-T02-S-H-I-05",
+            "DetailInfo": {
+                "Escolator": 0,
+                "Lift": 0,
+                "BabyRoom": false,
+                "WC": false,
+                "Masjid": false,
+                "Latitude": "41.029000",
+                "Longitude": "28.973000"
+            }
         }
     ]
 }
