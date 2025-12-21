@@ -41,7 +41,6 @@ export const Footer = () => {
 
             <div className="space-y-1">
                 <p className="font-medium">free imamson</p>
-                <p className="font-medium">tugaep</p>
             </div>
         </footer>
     );

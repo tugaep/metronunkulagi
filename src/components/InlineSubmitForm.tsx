@@ -228,7 +228,7 @@ export const InlineSubmitForm = () => {
         });
 
         toast.success('eyw', {
-            description: 'insta @kulakmetrofiri',
+            description: 'insta @metronunkulagi',
             style: {
                 backgroundColor: `hsl(${activeLineColor})`,
                 color: 'white',
@@ -267,10 +267,10 @@ export const InlineSubmitForm = () => {
                         className="flex flex-col items-center justify-center py-12"
                     >
                         <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50 select-none">
-                            Ne duydun?
+                            ne duydun?
                         </h2>
                         <p className="text-sm text-muted-foreground mt-2 select-none">
-                            Paylaşmak için bir hat seçin
+                            paylaşmak için bir hat seç
                         </p>
                     </motion.div>
                 ) : (

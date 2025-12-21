@@ -31,13 +31,13 @@ export const Header = () => {
             </motion.div>
           </motion.div>
           <div>
-            <h1 className="text-lg font-bold tracking-tight">kulakmetrofiri</h1>
+            <h1 className="text-lg font-bold tracking-tight">metronunkulağı</h1>
             <p className="text-xs text-muted-foreground -mt-0.5">kulak misafiri ama istanbul metro hesaaaaabı</p>
           </div>
         </div>
 
         <motion.a
-          href="https://instagram.com/kulakmetrofiri"
+          href="https://instagram.com/metronunkulagi"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackEvent('header_instagram_click')}

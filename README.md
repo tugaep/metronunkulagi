@@ -1,4 +1,4 @@
-# kulakmetrofiri
+# metronunkulağı
 
 cool little project that i created overnight on december 18th - 19th 2025
 
@@ -26,7 +26,7 @@ things i used:
 - antigravity ide and gemini 3 high for coding assistant
 - google analytics
 
-thing is live on [kulakmetrofiri.com](https://kulakmetrofiri.com)
+thing is live on [metronunkulagi.com](https://metronunkulagi.com)
 
 team m2 4eva
 
