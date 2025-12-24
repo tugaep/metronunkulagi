@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { CatProvider, useCats } from "./contexts/CatContext";
 import { RoamingCat } from "./components/RoamingCat";
+import { AnalyticsTracker } from "./components/AnalyticsTracker";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <AnalyticsTracker />
         </BrowserRouter>
       </TooltipProvider>
     </CatProvider>
