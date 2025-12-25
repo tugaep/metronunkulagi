@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useMetro } from '@/context/MetroContext';
 import { METRO_LINE_COLORS } from '@/types/metro';
-import { cn } from '@/lib/utils';
+import { cn, isLightColor } from '@/lib/utils';
 import { trackEvent } from '@/lib/analytics';
 
 export const LineSelector = () => {
@@ -25,6 +25,7 @@ export const LineSelector = () => {
         {lines.map((line, index) => {
           const isSelected = selectedLine?.id === line.id;
           const lineColor = METRO_LINE_COLORS[line.id] || '220 15% 50%';
+          const useDarkText = isLightColor(lineColor);
 
           return (
             <motion.button
@@ -34,25 +35,19 @@ export const LineSelector = () => {
               transition={{ delay: index * 0.03, duration: 0.3 }}
               onClick={() => handleLineSelect(line)}
               className={cn(
-                "flex-shrink-0 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300",
+                "flex-shrink-0 px-4 py-2.5 font-semibold text-sm transition-all duration-300",
                 "border-2 focus:outline-none focus:ring-2 focus:ring-offset-2",
                 isSelected
-                  ? "text-primary-foreground scale-105"
-                  : "bg-card text-foreground border-border hover:border-transparent"
+                  ? "scale-105 border-transparent bg-[hsl(var(--line-color))] text-[var(--text-color)] shadow-[0_4px_20px_hsl(var(--line-color)/0.4)]"
+                  : "bg-card text-foreground border-border hover:border-transparent hover:bg-[hsl(var(--line-color)/0.1)]"
               )}
               style={{
-                ...(isSelected && {
-                  background: `hsl(${lineColor})`,
-                  borderColor: `hsl(${lineColor})`,
-                  boxShadow: `0 4px 20px hsl(${lineColor} / 0.4)`,
-                }),
-                ...(!isSelected && {
-                  '--hover-bg': `hsl(${lineColor} / 0.1)`,
-                } as React.CSSProperties),
-              }}
+                borderRadius: '0.75rem',
+                '--line-color': lineColor,
+                '--text-color': useDarkText ? 'hsl(220 20% 10%)' : 'white',
+              } as React.CSSProperties}
               whileHover={{
                 scale: isSelected ? 1.05 : 1.02,
-                backgroundColor: isSelected ? undefined : `hsl(${lineColor} / 0.1)`,
               }}
               whileTap={{ scale: 0.98 }}
             >

@@ -5,10 +5,8 @@ import { LineSelector } from '@/components/LineSelector';
 import { Footer } from '@/components/Footer';
 
 import { InlineSubmitForm } from '@/components/InlineSubmitForm';
-import { useSystemTheme } from '@/hooks/useSystemTheme';
 
 const IndexContent = () => {
-  useSystemTheme();
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
