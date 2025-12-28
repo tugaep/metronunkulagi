@@ -267,10 +267,10 @@ export const InlineSubmitForm = () => {
                         className="flex flex-col items-center justify-center py-12"
                     >
                         <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50 select-none">
-                            ne duydun?
+                            metro'da bir konuşmaya kulak misafiri mi oldun?
                         </h2>
                         <p className="text-sm text-muted-foreground mt-2 select-none">
-                            paylaşmak için bir hat seç
+                            hemen paylaşmak için bir hat seç
                         </p>
                     </motion.div>
                 ) : (
